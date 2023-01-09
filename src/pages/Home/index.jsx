@@ -39,7 +39,7 @@ const APPS = [
   },
   {
     backgroundColor: 'white',
-    onClickAction: () => window.open('https://www.open.spotify.com/', '_self'),
+    onClickAction: () => window.open('https://open.spotify.com/', '_self'),
     image: Spotify,
     imageHeight: '300px',
     selected: false,
