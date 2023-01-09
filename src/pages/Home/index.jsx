@@ -61,7 +61,7 @@ const APPS = [
 ]
 
 function Home() {
-  const activeUser = JSON.parse(sessionStorage.getItem('activeUser'))
+  const activeUser = JSON.parse(localStorage.getItem('activeUser'))
   const userImage = require(`media/${activeUser.image}`)
   const date = new Date()
   const defaultTime = date.getHours() + ':' + date.getMinutes().toString().padStart(2, '0')
@@ -79,7 +79,7 @@ function Home() {
   }
 
   const closeSession = () => {
-    sessionStorage.removeItem('activeUser')
+    localStorage.removeItem('activeUser')
   }
 
   const refreshTime = () => {

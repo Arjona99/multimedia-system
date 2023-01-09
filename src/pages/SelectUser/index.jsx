@@ -65,7 +65,7 @@ function SelectUser() {
   }, [])
 
   const selectUser = (user) => {
-    sessionStorage.setItem('activeUser', JSON.stringify(user))
+    localStorage.setItem('activeUser', JSON.stringify(user))
   }
 
 
