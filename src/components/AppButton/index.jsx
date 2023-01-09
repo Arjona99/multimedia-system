@@ -1,9 +1,9 @@
 import { Container } from "./styled"
 
 
-function AppButton ({children, backgroundColor}) {
+function AppButton ({children, selected, backgroundColor, onClickAction}) {
   return (
-    <Container bgColor={backgroundColor}>
+    <Container bgColor={backgroundColor} onClick={onClickAction} selected={selected}>
       {children}
     </Container>
   )

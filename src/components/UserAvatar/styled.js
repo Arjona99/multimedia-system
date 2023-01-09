@@ -17,4 +17,8 @@ export const Image = styled.img`
   width: ${({size}) => `${size}px`};
   border: 5px solid white;
   border-radius: 50%;
+
+  ${({hasFocus}) => hasFocus && `
+    border: 5px solid violet;
+  `}
 `

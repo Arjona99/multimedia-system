@@ -8,9 +8,8 @@ import Home from 'pages/Home'
 function App() {
   return (
     <div className="App">
-      <Home />
-      {/* <SelectUser /> */}
-        {/* <UserAvatar name="Sebastián" image={avatar} direction='column' /> */}
+      {/* <Home /> */}
+      <SelectUser />
     </div>
   );
 }
