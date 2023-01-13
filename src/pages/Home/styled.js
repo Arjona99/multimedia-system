@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
 
 export const AppsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   gap: 64px;
   flex-wrap: wrap;
@@ -20,12 +20,6 @@ export const RightItems = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
-`
-
-export const AppFrame = styled.iframe`
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
 `
 
 export const Logout = styled.img`

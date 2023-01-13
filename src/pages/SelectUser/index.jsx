@@ -15,11 +15,7 @@ const USERS = [
     image: 'user-panda.png',
     name: 'Joaquín',
     hasFocus: false,
-  },
-  {
-    name: 'Agregar usuario',
-    hasFocus: false,
-  },
+  }
 ]
 
 function SelectUser() {

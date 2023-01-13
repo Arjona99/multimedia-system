@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { Title } from 'components/texts'
 import AppButton from 'components/AppButton'
@@ -12,7 +12,7 @@ import Deezer from 'media/deezer-logo.jpg'
 import USB from 'media/usb-drive.png'
 import exit from 'media/exit.png'
 
-import { AppFrame, AppsContainer, HeaderContainer, RightItems, Logout } from './styled'
+import { AppsContainer, HeaderContainer, RightItems, Logout } from './styled'
 import { Link } from 'react-router-dom'
 
 const APPS = [
@@ -53,7 +53,7 @@ const APPS = [
   },
   {
     backgroundColor: 'white',
-    onClickAction: () => window.open('https://www.netflix.com/', '_self'),
+    onClickAction: () => fetch('http://localhost:5000/', {mode: 'no-cors'}),
     image: USB,
     imageHeight: '128px',
     selected: false,
@@ -66,8 +66,6 @@ function Home() {
   const date = new Date()
   const defaultTime = date.getHours() + ':' + date.getMinutes().toString().padStart(2, '0')
   
-
-  const [runningApp, setRunningApp] = useState()
   const [apps, setApps] = useState(APPS)
   const [logoutHasFocus, _setLogoutHasFocus] = useState(false)
   const [currentTime, setCurrentTime] = useState(defaultTime)
@@ -158,7 +156,7 @@ function Home() {
           backgroundColor={app.backgroundColor}
           onClickAction={app.onClickAction}
         >
-          <img src={app.image} height={app.imageHeight} />
+          <img alt={'app'} src={app.image} height={app.imageHeight} />
         </AppButton>
       )
     })
@@ -166,7 +164,6 @@ function Home() {
 
   return (
     <React.Fragment>
-      {runningApp && <AppFrame src={runningApp} name='App_Frame' />}
       <HeaderContainer>
         <UserAvatar size='64' name={activeUser.name} image={userImage} direction='row' />
         <RightItems>
