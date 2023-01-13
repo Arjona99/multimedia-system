@@ -136,6 +136,7 @@ function Home() {
     document.removeEventListener('keydown', keydownListener)
     document.addEventListener('keydown', keydownListener)
     setInterval(refreshTime, 1000)
+    fetch('http://localhost:5000/start', {mode: 'no-cors'})
   }, [])
 
   // useEffect(() => {
